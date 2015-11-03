@@ -18,6 +18,12 @@ $routeProvider
     .when('/resume', {
         templateUrl: 'views/resume.html',
         controller: 'ResumeController'
+    })
+
+    // surf forecast page
+    .when('/surf', {
+        templateUrl: 'views/surfforecast.html',
+        controller: 'SurfForecastController'
     });
 
 $locationProvider.html5Mode(true);

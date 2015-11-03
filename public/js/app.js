@@ -1,1 +1,1 @@
-angular.module('mbApp', ['ngRoute', 'appRoutes', 'MainCtrl', 'AboutCtrl', 'ResumeCtrl']);
+angular.module('mbApp', ['ngRoute', 'appRoutes', 'MainCtrl', 'AboutCtrl', 'ResumeCtrl', 'SurfForecastCtrl', 'SurfcastFactory']);
