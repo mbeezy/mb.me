@@ -1,5 +1,7 @@
-angular.module('ResumeCtrl', []).controller('ResumeController', function($scope) {
+angular.module('ResumeCtrl', []).controller('ResumeController', ['$scope', 'ResumeFactory', function($scope, ResumeFactory) {
 
-    $scope.tagline = 'Resume...pretty impressive';
+    ResumeFactory.getResume().success(function(data) {
+      $scope.resume = data;
+    });
 
-});
+}]);

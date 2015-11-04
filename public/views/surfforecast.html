@@ -9,6 +9,9 @@
 
     <h2>{{ selectedSpot }} for Today, {{ currentDate | date:'MM-dd-yyyy' }}</h2>
 
-    <div id="spotDetails" class="text-center" ng-repeat="spot in spotForecast">{{spot.size}} ft. {{ spot.shape_full }} @ {{ spot.hour }}</div>
+    <div id="spotDetails" class="text-center" ng-repeat="spot in spotForecast">
+      {{spot.size}} ft. {{ spot.shape_full }} @ {{ spot.hour }}
+      Wind: {{ spot.shape_detail.wind  }}
+    </div>
 
 </div>

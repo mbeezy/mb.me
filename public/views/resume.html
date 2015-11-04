@@ -1,5 +1,18 @@
 <div class="jumbotron text-center">
     <h1>Resume</h1>
+    <br>
+    <div class="container" ng-repeat="detail in resume">
+      <div class="row">
+        <div class="col-md-4">
+            <p><strong>{{ detail.position }}</strong><br>@{{ detail.company }}</p>
+            From: {{ detail.fromDate | date:'MM-dd-yyyy' }}<br>To: {{ detail.toDate | date:'MM-dd-yyyy' }}
+        </div>
+        <div class="col-md-8 text-left">
+          <ul>
+            <li ng-repeat="responsibility in detail.responsibilities">{{ responsibility }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-    <p>{{ tagline }}</p>
 </div>
