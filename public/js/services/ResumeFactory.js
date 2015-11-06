@@ -1,5 +1,5 @@
 angular.module('ResumeFactory', []).factory('ResumeFactory', ['$http', function($http) {
-  var urlBase = 'http://mb-me-api.azurewebsites.net/api';
+  var urlBase = 'http://mb-me-workexp.azurewebsites.net/api';
   var factory = {};
 
   //http://mb-me-api.azurewebsites.net/api/resume
