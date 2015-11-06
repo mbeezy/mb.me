@@ -1,17 +1,25 @@
 <div class="jumbotron text-center">
 
     <h1>Surf Forecast for San Diego</h1>
+    
+    <div class="container post">
 
-    <h2>Pick a Spot:</h2>
-    <select id="surfSpotList" ng-model="spotId" ng-change="getSurfSpotForecast(spotId)" ng-options="spot.spot_id as spot.spot_name for spot in sdSpots | orderBy: spot_name">
-      <option value="">Select Surf Spot</option>
-    </select>
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Pick a Spot:</h2>
+          <select id="surfSpotList" ng-model="spotId" ng-change="getSurfSpotForecast(spotId)" ng-options="spot.spot_id as spot.spot_name for spot in sdSpots | orderBy: spot_name">
+            <option value="">Select Surf Spot</option>
+          </select>
+        </div>
+        <div class="col-md-8 text-center">
+          <h2>{{ selectedSpot }} for Today, {{ currentDate | date:'MM-dd-yyyy' }}</h2>
 
-    <h2>{{ selectedSpot }} for Today, {{ currentDate | date:'MM-dd-yyyy' }}</h2>
+          <div id="spotDetails" class="text-center" ng-repeat="spot in spotForecast">
+            {{spot.size}} ft. {{ spot.shape_full }} @ {{ spot.hour }}
+            Wind: {{ spot.shape_detail.wind  }}
+        </div>
+      </div>
 
-    <div id="spotDetails" class="text-center" ng-repeat="spot in spotForecast">
-      {{spot.size}} ft. {{ spot.shape_full }} @ {{ spot.hour }}
-      Wind: {{ spot.shape_detail.wind  }}
     </div>
 
 </div>
