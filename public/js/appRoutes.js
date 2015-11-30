@@ -26,6 +26,12 @@ angular
     .when('/surf', {
         templateUrl: 'views/surfforecast.html',
         controller: 'SurfForecastController'
+    })
+
+    // digi waxx
+    .when('/digi', {
+        templateUrl: 'views/digi.html',
+        controller: 'DigiController'
     });
 
 $locationProvider.html5Mode(true);

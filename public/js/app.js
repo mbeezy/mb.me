@@ -7,5 +7,7 @@ angular
     'ResumeCtrl',
     'SurfForecastCtrl',
     'SurfcastFactory',
-    'ResumeFactory'
+    'ResumeFactory',
+    'DigiCtrl',
+    'DigiFactory'
   ]);

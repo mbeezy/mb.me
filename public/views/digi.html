@@ -1,0 +1,18 @@
+<div class="jumbotron">
+  <h4>{{ tagline }}</h4>
+
+  <p>enter session: <input type='text' ng-model='cookie' size='50'/></p>
+  <p>
+    enter an id:
+    <input type='text' ng-model='trackid'/>
+  </p>
+  <p>
+    <button type="button" ng-click="initializeDownload(trackid, cookie)">download</button>
+  </p>
+  <p>
+    get links: <br>{{ mp3Link }}
+    <ul>
+      <li ng-repeat="link in mp3Links"><a href="http://www.digiwaxx.com/VerifyTrack.php?track={{ link }}.mp3" target="_blank">{{ link }}.mp3</li>
+    </ul>
+  </p>
+</div>
