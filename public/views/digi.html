@@ -11,7 +11,14 @@
   </p>
   <p>
     <ul>
-      <li ng-repeat="link in mp3Links"><a href="http://www.digiwaxx.com/VerifyTrack.php?track={{ link }}.mp3" target="_blank">{{ link }}.mp3</li>
+      <li ng-repeat="link in mp3Links">
+        <div ng-if="link == 'need to login'">
+          <a href="http://www.digiwaxx.com/Members/login_form.php?redirect=/Members/index.php" target="_blank">log in and get the session id first</a>
+        </div>
+        <div ng-if="link != 'need to login'">
+          <a href="http://www.digiwaxx.com/VerifyTrack.php?track={{ link }}.mp3" target="_blank">{{ link }}.mp3</a>
+        </div>
+      </li>
     </ul>
   </p>
 </div>
