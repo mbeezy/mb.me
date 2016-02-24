@@ -1,0 +1,5 @@
+<div ng-controller="personController as personCtrl">
+  First Name: <input type=text ng-model="personCtrl.firstName"><br>
+  Last Name: <input type=text ng-model="personCtrl.lastName"><br>
+  Full Name: {{ personCtrl.getFullName() }}
+</div>
